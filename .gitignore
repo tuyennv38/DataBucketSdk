@@ -52,3 +52,6 @@ crashlytics-build.properties
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Visual Studio cache
+.vs/
