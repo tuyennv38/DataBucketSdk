@@ -1,12 +1,12 @@
-<a id="plan-sprint-1-0001"></a>
+# Sprint 1 Plan — DataBucketPlugin
 
-# Sprint 1 Plan
+<a id="plan-sprint-1-0001"></a>
 
 `plan:sprint-1-0001`
 
 ## Sprint Goal
 
-Tạo bộ hoàn chỉnh 8 skill files cho Databuckets SDK (1 skill tổng + 7 skill con), theo chuẩn `skill-creator`.
+Hoàn thành toàn bộ DataBucketPlugin v1.0.0: wrapper class, documentation, và sample script.
 
 ## Sprint Duration
 
@@ -15,43 +15,34 @@ Tạo bộ hoàn chỉnh 8 skill files cho Databuckets SDK (1 skill tổng + 7 s
 
 ## Sprint Backlog
 
-<a id="task-create-skill-overview-0001"></a>
-<a id="task-create-skill-init-0002"></a>
-<a id="task-create-skill-record-0003"></a>
-<a id="task-create-skill-record-timing-0004"></a>
-<a id="task-create-skill-set-property-0005"></a>
-<a id="task-create-skill-set-properties-0006"></a>
-<a id="task-create-skill-end-session-0007"></a>
-<a id="task-create-skill-exception-tracking-0008"></a>
+<a id="task-setup-project-0001"></a>
+<a id="task-create-wrapper-0002"></a>
+<a id="task-create-readme-0003"></a>
+<a id="task-create-changelog-0004"></a>
+<a id="task-create-sample-0005"></a>
 
 | # | Task ID | Implements | Mô tả | Ước lượng | Status |
 |---|---------|------------|--------|-----------|--------|
-| 1 | `task:create-skill-overview-0001` | — (skill tổng) | Tạo `databuckets-skills/SKILL.md` — tổng quan SDK, chọn skill con | 15 phút | ✅ Done |
-| 2 | `task:create-skill-init-0002` | [`feature:skill-init-0001`](../../backlog/product-backlog.md#feature-skill-init-0001) | Tạo `databuckets-skills/init/SKILL.md` | 10 phút | ✅ Done |
-| 3 | `task:create-skill-record-0003` | [`feature:skill-record-0002`](../../backlog/product-backlog.md#feature-skill-record-0002) | Tạo `databuckets-skills/record/SKILL.md` | 10 phút | ✅ Done |
-| 4 | `task:create-skill-record-timing-0004` | [`feature:skill-record-timing-0003`](../../backlog/product-backlog.md#feature-skill-record-timing-0003) | Tạo `databuckets-skills/record-timing/SKILL.md` | 10 phút | ✅ Done |
-| 5 | `task:create-skill-set-property-0005` | [`feature:skill-set-property-0004`](../../backlog/product-backlog.md#feature-skill-set-property-0004) | Tạo `databuckets-skills/set-property/SKILL.md` | 10 phút | ✅ Done |
-| 6 | `task:create-skill-set-properties-0006` | [`feature:skill-set-properties-0005`](../../backlog/product-backlog.md#feature-skill-set-properties-0005) | Tạo `databuckets-skills/set-properties/SKILL.md` | 10 phút | ✅ Done |
-| 7 | `task:create-skill-end-session-0007` | [`feature:skill-end-session-0006`](../../backlog/product-backlog.md#feature-skill-end-session-0006) | Tạo `databuckets-skills/end-session/SKILL.md` | 10 phút | ✅ Done |
-| 8 | `task:create-skill-exception-tracking-0008` | [`feature:skill-exception-tracking-0007`](../../backlog/product-backlog.md#feature-skill-exception-tracking-0007) | Tạo `databuckets-skills/exception-tracking/SKILL.md` | 10 phút | ✅ Done |
+| 1 | `task:setup-project-0001` | [`prd:tech-stack-0002`](../../PRDs/PRD-002.md#prd-tech-stack-0002) | Tạo cấu trúc thư mục Assets/DataBucketPlugin/ | 5 min | ⬜ To Do |
+| 2 | `task:create-wrapper-0002` | [`feature:wrapper-init-0001`](../../backlog/product-backlog-002.md#feature-wrapper-init-0001) | Tạo DataBucketWrapper.cs — static wrapper class | 30 min | ⬜ To Do |
+| 3 | `task:create-readme-0003` | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo documents/README.md | 20 min | ⬜ To Do |
+| 4 | `task:create-changelog-0004` | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo documents/CHANGE_LOG.md v1.0.0 | 5 min | ⬜ To Do |
+| 5 | `task:create-sample-0005` | [`feature:sample-script-0009`](../../backlog/product-backlog-002.md#feature-sample-script-0009) | Tạo samples/DataBucketWrapperSample.cs | 15 min | ⬜ To Do |
 
 ## Definition of Done (DoD)
 
-- [x] SKILL.md viết theo chuẩn skill-creator (10 sections)
-- [x] Frontmatter hợp lệ YAML
-- [x] Code mẫu C# chính xác
-- [x] QA Checklist skill-creator đã pass
+- [ ] Code đã được viết và build thành công
+- [ ] Tài liệu README và CHANGE_LOG hoàn chỉnh
+- [ ] Sample script cover tất cả 7 API
+- [ ] User đã review và duyệt
 
 ## Phụ lục: Bảng tổng hợp ID & Truy vết
 
 | ID | Loại | Implements | Mô tả ngắn |
 |----|------|------------|-------------|
 | [`plan:sprint-1-0001`](#plan-sprint-1-0001) | plan | — (gốc) | Sprint 1 Plan |
-| [`task:create-skill-overview-0001`](#task-create-skill-overview-0001) | task | — | Skill tổng databuckets-skills |
-| [`task:create-skill-init-0002`](#task-create-skill-init-0002) | task | [`feature:skill-init-0001`](../../backlog/product-backlog.md#feature-skill-init-0001) | Skill init |
-| [`task:create-skill-record-0003`](#task-create-skill-record-0003) | task | [`feature:skill-record-0002`](../../backlog/product-backlog.md#feature-skill-record-0002) | Skill record |
-| [`task:create-skill-record-timing-0004`](#task-create-skill-record-timing-0004) | task | [`feature:skill-record-timing-0003`](../../backlog/product-backlog.md#feature-skill-record-timing-0003) | Skill record-timing |
-| [`task:create-skill-set-property-0005`](#task-create-skill-set-property-0005) | task | [`feature:skill-set-property-0004`](../../backlog/product-backlog.md#feature-skill-set-property-0004) | Skill set-property |
-| [`task:create-skill-set-properties-0006`](#task-create-skill-set-properties-0006) | task | [`feature:skill-set-properties-0005`](../../backlog/product-backlog.md#feature-skill-set-properties-0005) | Skill set-properties |
-| [`task:create-skill-end-session-0007`](#task-create-skill-end-session-0007) | task | [`feature:skill-end-session-0006`](../../backlog/product-backlog.md#feature-skill-end-session-0006) | Skill end-session |
-| [`task:create-skill-exception-tracking-0008`](#task-create-skill-exception-tracking-0008) | task | [`feature:skill-exception-tracking-0007`](../../backlog/product-backlog.md#feature-skill-exception-tracking-0007) | Skill exception-tracking |
+| [`task:setup-project-0001`](#task-setup-project-0001) | task | [`prd:tech-stack-0002`](../../PRDs/PRD-002.md#prd-tech-stack-0002) | Tạo cấu trúc thư mục |
+| [`task:create-wrapper-0002`](#task-create-wrapper-0002) | task | [`feature:wrapper-init-0001`](../../backlog/product-backlog-002.md#feature-wrapper-init-0001) | Tạo DataBucketWrapper.cs |
+| [`task:create-readme-0003`](#task-create-readme-0003) | task | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo README.md |
+| [`task:create-changelog-0004`](#task-create-changelog-0004) | task | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo CHANGE_LOG.md |
+| [`task:create-sample-0005`](#task-create-sample-0005) | task | [`feature:sample-script-0009`](../../backlog/product-backlog-002.md#feature-sample-script-0009) | Tạo sample script |
