@@ -27,7 +27,8 @@ Quy trình gồm **4 giai đoạn chính**, được tách thành các file chi 
 ├── agile-development.md              ← 🎯 BẠN ĐANG Ở ĐÂY (file tổng — orchestrator)
 └── agile/
     ├── 01-create-prd.md              # Giai đoạn 0: Thu thập yêu cầu, tạo PRD, gán ID, commit
-    ├── 01-pre-sprint.md              # Giai đoạn 1: Backlog, Setup, ADR, System Design, Commit docs
+    ├── 02-architect.md               # Giai đoạn 1a: Thiết kế kiến trúc (ADR + System Design)
+    ├── 01-pre-sprint.md              # Giai đoạn 1b: Backlog, Setup thư mục, Commit docs
     ├── 02-sprint-planning.md         # Bước 2.1: Sprint Planning + Commit plan
     ├── 03-implementation.md          # Bước 2.2 + 2.3: Coding + User Testing + Commit Finish
     ├── 04-review-testing.md          # Bước 2.4: Code Review (self-review)
@@ -56,15 +57,27 @@ Quy trình gồm **4 giai đoạn chính**, được tách thành các file chi 
 
 ### Giai đoạn 1: Chuẩn bị (Pre-Sprint) — Chạy 1 lần sau khi PRD được duyệt
 
+#### 1a. Thiết kế kiến trúc (Architect)
+
 | Bước | Mô tả | File chi tiết |
 |------|-------|---------------|
-| 1.1 | Phân tích PRD & Tạo Product Backlog | 📄 `agile/01-pre-sprint.md` |
-| 1.2 | Thiết lập cấu trúc thư mục dự án | 📄 `agile/01-pre-sprint.md` |
-| 1.3 | Architecture Decision Records (ADR) | 📄 `agile/01-pre-sprint.md` |
-| 1.4 | System Architecture & Design | 📄 `agile/01-pre-sprint.md` |
-| 1.5 | **Commit tài liệu Pre-Sprint** ⚠️ BẮT BUỘC | 📄 `agile/01-pre-sprint.md` |
+| 1.1 | Phân tích yêu cầu kỹ thuật từ PRD | 📄 `agile/02-architect.md` |
+| 1.2 | Architecture Decision Records (ADR) | 📄 `agile/02-architect.md` |
+| 1.3 | System Architecture & Design | 📄 `agile/02-architect.md` |
+| 1.4 | User review tài liệu kiến trúc | 📄 `agile/02-architect.md` |
+| 1.5 | **Commit tài liệu kiến trúc** ⚠️ BẮT BUỘC | 📄 `agile/02-architect.md` |
 
-> 📖 **Đọc:** `.agents/workflows/agile/01-pre-sprint.md` để thực hiện toàn bộ Giai đoạn 1.
+> 📖 **Đọc:** `.agents/workflows/agile/02-architect.md` để thực hiện thiết kế kiến trúc.
+
+#### 1b. Backlog & Setup
+
+| Bước | Mô tả | File chi tiết |
+|------|-------|---------------|
+| 1.6 | Phân tích PRD & Tạo Product Backlog | 📄 `agile/01-pre-sprint.md` |
+| 1.7 | Thiết lập cấu trúc thư mục dự án | 📄 `agile/01-pre-sprint.md` |
+| 1.8 | **Commit tài liệu Pre-Sprint** ⚠️ BẮT BUỘC | 📄 `agile/01-pre-sprint.md` |
+
+> 📖 **Đọc:** `.agents/workflows/agile/01-pre-sprint.md` để thực hiện backlog & setup.
 
 ---
 
