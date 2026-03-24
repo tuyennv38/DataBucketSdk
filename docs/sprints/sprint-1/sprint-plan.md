@@ -26,21 +26,21 @@ Tạo bộ hoàn chỉnh 8 skill files cho Databuckets SDK (1 skill tổng + 7 s
 
 | # | Task ID | Implements | Mô tả | Ước lượng | Status |
 |---|---------|------------|--------|-----------|--------|
-| 1 | `task:create-skill-overview-0001` | — (skill tổng) | Tạo `databuckets-skills/SKILL.md` — tổng quan SDK, chọn skill con | 15 phút | ⬜ To Do |
-| 2 | `task:create-skill-init-0002` | [`feature:skill-init-0001`](../../backlog/product-backlog.md#feature-skill-init-0001) | Tạo `databuckets-skills/init/SKILL.md` | 10 phút | ⬜ To Do |
-| 3 | `task:create-skill-record-0003` | [`feature:skill-record-0002`](../../backlog/product-backlog.md#feature-skill-record-0002) | Tạo `databuckets-skills/record/SKILL.md` | 10 phút | ⬜ To Do |
-| 4 | `task:create-skill-record-timing-0004` | [`feature:skill-record-timing-0003`](../../backlog/product-backlog.md#feature-skill-record-timing-0003) | Tạo `databuckets-skills/record-timing/SKILL.md` | 10 phút | ⬜ To Do |
-| 5 | `task:create-skill-set-property-0005` | [`feature:skill-set-property-0004`](../../backlog/product-backlog.md#feature-skill-set-property-0004) | Tạo `databuckets-skills/set-property/SKILL.md` | 10 phút | ⬜ To Do |
-| 6 | `task:create-skill-set-properties-0006` | [`feature:skill-set-properties-0005`](../../backlog/product-backlog.md#feature-skill-set-properties-0005) | Tạo `databuckets-skills/set-properties/SKILL.md` | 10 phút | ⬜ To Do |
-| 7 | `task:create-skill-end-session-0007` | [`feature:skill-end-session-0006`](../../backlog/product-backlog.md#feature-skill-end-session-0006) | Tạo `databuckets-skills/end-session/SKILL.md` | 10 phút | ⬜ To Do |
-| 8 | `task:create-skill-exception-tracking-0008` | [`feature:skill-exception-tracking-0007`](../../backlog/product-backlog.md#feature-skill-exception-tracking-0007) | Tạo `databuckets-skills/exception-tracking/SKILL.md` | 10 phút | ⬜ To Do |
+| 1 | `task:create-skill-overview-0001` | — (skill tổng) | Tạo `databuckets-skills/SKILL.md` — tổng quan SDK, chọn skill con | 15 phút | ✅ Done |
+| 2 | `task:create-skill-init-0002` | [`feature:skill-init-0001`](../../backlog/product-backlog.md#feature-skill-init-0001) | Tạo `databuckets-skills/init/SKILL.md` | 10 phút | ✅ Done |
+| 3 | `task:create-skill-record-0003` | [`feature:skill-record-0002`](../../backlog/product-backlog.md#feature-skill-record-0002) | Tạo `databuckets-skills/record/SKILL.md` | 10 phút | ✅ Done |
+| 4 | `task:create-skill-record-timing-0004` | [`feature:skill-record-timing-0003`](../../backlog/product-backlog.md#feature-skill-record-timing-0003) | Tạo `databuckets-skills/record-timing/SKILL.md` | 10 phút | ✅ Done |
+| 5 | `task:create-skill-set-property-0005` | [`feature:skill-set-property-0004`](../../backlog/product-backlog.md#feature-skill-set-property-0004) | Tạo `databuckets-skills/set-property/SKILL.md` | 10 phút | ✅ Done |
+| 6 | `task:create-skill-set-properties-0006` | [`feature:skill-set-properties-0005`](../../backlog/product-backlog.md#feature-skill-set-properties-0005) | Tạo `databuckets-skills/set-properties/SKILL.md` | 10 phút | ✅ Done |
+| 7 | `task:create-skill-end-session-0007` | [`feature:skill-end-session-0006`](../../backlog/product-backlog.md#feature-skill-end-session-0006) | Tạo `databuckets-skills/end-session/SKILL.md` | 10 phút | ✅ Done |
+| 8 | `task:create-skill-exception-tracking-0008` | [`feature:skill-exception-tracking-0007`](../../backlog/product-backlog.md#feature-skill-exception-tracking-0007) | Tạo `databuckets-skills/exception-tracking/SKILL.md` | 10 phút | ✅ Done |
 
 ## Definition of Done (DoD)
 
-- [ ] SKILL.md viết theo chuẩn skill-creator (10 sections)
-- [ ] Frontmatter hợp lệ YAML
-- [ ] Code mẫu C# chính xác
-- [ ] QA Checklist skill-creator đã pass
+- [x] SKILL.md viết theo chuẩn skill-creator (10 sections)
+- [x] Frontmatter hợp lệ YAML
+- [x] Code mẫu C# chính xác
+- [x] QA Checklist skill-creator đã pass
 
 ## Phụ lục: Bảng tổng hợp ID & Truy vết
 

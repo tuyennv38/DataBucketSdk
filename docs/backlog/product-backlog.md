@@ -14,12 +14,12 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn gọi `DatabucketsTracker.Init()` để khởi tạo SDK đúng cách.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator (10 sections)
-  - [ ] Code mẫu C# chạy được
-  - [ ] Anti-patterns đủ rõ (Awake, gọi nhiều lần)
+  - [x] SKILL.md theo chuẩn skill-creator (10 sections)
+  - [x] Code mẫu C# chạy được
+  - [x] Anti-patterns đủ rõ (Awake, gọi nhiều lần)
 - **Priority:** Critical
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -32,12 +32,12 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn gọi `DatabucketsTracker.Record()` để ghi nhận business events.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator
-  - [ ] Ví dụ với params Dictionary
-  - [ ] Lưu ý auto-tracking events không trùng tên
+  - [x] SKILL.md theo chuẩn skill-creator
+  - [x] Ví dụ với params Dictionary
+  - [x] Lưu ý auto-tracking events không trùng tên
 - **Priority:** Critical
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -50,12 +50,12 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn gọi `DatabucketsTracker.RecordWithTiming()` để đo thời gian giữa 2 events.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator
-  - [ ] Ví dụ cặp start/end event
-  - [ ] Ghi rõ phải Record startEvent trước
+  - [x] SKILL.md theo chuẩn skill-creator
+  - [x] Ví dụ cặp start/end event
+  - [x] Ghi rõ phải Record startEvent trước
 - **Priority:** High
 - **Story Points:** 3
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -68,11 +68,11 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn gọi `SetCommonProperty()` để set thuộc tính chung cho mọi event.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator
-  - [ ] Phân biệt rõ với SetCommonProperties
+  - [x] SKILL.md theo chuẩn skill-creator
+  - [x] Phân biệt rõ với SetCommonProperties
 - **Priority:** Medium
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -85,11 +85,11 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn gọi `SetCommonProperties()` để set nhiều thuộc tính cùng lúc.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator
-  - [ ] Phân biệt rõ với SetCommonProperty
+  - [x] SKILL.md theo chuẩn skill-creator
+  - [x] Phân biệt rõ với SetCommonProperty
 - **Priority:** Medium
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -102,11 +102,11 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn gọi `ForceEndCurrentSession()` để kết thúc session thủ công.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator
-  - [ ] Ghi rõ chỉ dùng khi đặc biệt (logout, switch account)
+  - [x] SKILL.md theo chuẩn skill-creator
+  - [x] Ghi rõ chỉ dùng khi đặc biệt (logout, switch account)
 - **Priority:** Low
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -119,11 +119,11 @@
 
 - **User Story:** Với vai trò là AI agent, tôi muốn có skill hướng dẫn bật/tắt `EnableExceptionLogTracking()` để theo dõi Unity exceptions.
 - **Acceptance Criteria:**
-  - [ ] SKILL.md theo chuẩn skill-creator
-  - [ ] Hướng dẫn Enable/Disable
+  - [x] SKILL.md theo chuẩn skill-creator
+  - [x] Hướng dẫn Enable/Disable
 - **Priority:** Low
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
