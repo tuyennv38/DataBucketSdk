@@ -28,7 +28,7 @@ Quy trình gồm **4 giai đoạn chính**, được tách thành các file chi 
 └── agile/
     ├── 01-create-prd.md              # Giai đoạn 0: Thu thập yêu cầu, tạo PRD, gán ID, commit
     ├── 02-architect.md               # Giai đoạn 1a: Thiết kế kiến trúc (ADR + System Design)
-    ├── 01-pre-sprint.md              # Giai đoạn 1b: Backlog, Setup thư mục, Commit docs
+    ├── 03-pre-sprint.md              # Giai đoạn 1b: Backlog, Setup thư mục, Commit docs
     ├── 02-sprint-planning.md         # Bước 2.1: Sprint Planning + Commit plan
     ├── 03-implementation.md          # Bước 2.2 + 2.3: Coding + User Testing + Commit Finish
     ├── 04-review-testing.md          # Bước 2.4: Code Review (self-review)
@@ -73,11 +73,11 @@ Quy trình gồm **4 giai đoạn chính**, được tách thành các file chi 
 
 | Bước | Mô tả | File chi tiết |
 |------|-------|---------------|
-| 1.6 | Phân tích PRD & Tạo Product Backlog | 📄 `agile/01-pre-sprint.md` |
-| 1.7 | Thiết lập cấu trúc thư mục dự án | 📄 `agile/01-pre-sprint.md` |
-| 1.8 | **Commit tài liệu Pre-Sprint** ⚠️ BẮT BUỘC | 📄 `agile/01-pre-sprint.md` |
+| 1.6 | Phân tích PRD & Tạo Product Backlog | 📄 `agile/03-pre-sprint.md` |
+| 1.7 | Thiết lập cấu trúc thư mục dự án | 📄 `agile/03-pre-sprint.md` |
+| 1.8 | **Commit tài liệu Pre-Sprint** ⚠️ BẮT BUỘC | 📄 `agile/03-pre-sprint.md` |
 
-> 📖 **Đọc:** `.agents/workflows/agile/01-pre-sprint.md` để thực hiện backlog & setup.
+> 📖 **Đọc:** `.agents/workflows/agile/03-pre-sprint.md` để thực hiện backlog & setup.
 
 ---
 
