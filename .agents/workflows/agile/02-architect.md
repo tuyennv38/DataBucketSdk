@@ -7,6 +7,8 @@ description: Bước 2 - Thiết kế kiến trúc dự án (ADR + System Design
 > **Mục tiêu:** Phân tích PRD → Ghi nhận quyết định kiến trúc (ADR) → Thiết kế hệ thống (System Design) → User duyệt → Commit.
 >
 > **Vai trò:** Agent đóng vai **Architect** — chịu trách nhiệm thiết kế kiến trúc trước khi dev code.
+>
+> **🔓 TỰ ĐỘNG HOÀN TOÀN:** Agent tự động thực hiện mọi thao tác (tạo thư mục, viết tài liệu, vẽ diagram...) mà KHÔNG cần hỏi user. Chỉ dừng lại ở Bước 2.4 (User review) trước khi commit.
 
 ---
 

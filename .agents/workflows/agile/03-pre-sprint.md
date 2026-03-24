@@ -5,6 +5,8 @@ description: Bước 3 - Tạo Product Backlog, thiết lập cấu trúc thư m
 # 📋 Bước 3: Pre-Sprint (Backlog & Setup)
 
 > **Mục tiêu:** Phân tích PRD → Tạo Product Backlog → Thiết lập cấu trúc thư mục → User duyệt → Commit.
+>
+> **🔓 TỰ ĐỘNG HOÀN TOÀN:** Agent tự động thực hiện mọi thao tác mà KHÔNG cần hỏi user. Chỉ dừng lại ở Bước 3.3 (User review) trước khi commit.
 
 ---
 

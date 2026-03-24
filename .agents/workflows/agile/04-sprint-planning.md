@@ -5,6 +5,8 @@ description: Bước 4 - Sprint Planning - Lập kế hoạch Sprint từ Produc
 # 🏁 Bước 4: Sprint Planning
 
 > **Mục tiêu:** Chọn PBI từ Product Backlog → Phân tách thành task → User duyệt → Commit Sprint Plan.
+>
+> **🔓 TỰ ĐỘNG HOÀN TOÀN:** Agent tự động thực hiện mọi thao tác mà KHÔNG cần hỏi user. Chỉ dừng lại ở Bước 4.3 (User review) trước khi commit.
 
 ---
 
