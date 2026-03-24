@@ -16,13 +16,15 @@ description: Bước 3 - Tạo Product Backlog, thiết lập cấu trúc thư m
 
 ---
 
-## Bước 3.1: Phân tích PRD & Tạo Product Backlog
+## Bước 3.1: Phân tích PRD & Architecture → Tạo Product Backlog
 
-> **Input:** `docs/PRDs/*.md`
+> **Input:** `docs/PRDs/*.md` + `docs/architecture/system-design.md` + `docs/ADR/*.md`
 > **Output:** `docs/backlog/product-backlog.md`
 
 1. Đọc tất cả file PRD trong `docs/PRDs/`
-2. Trích xuất tất cả **feature** (các ID có prefix `feature:*`) từ PRD
+2. Đọc tài liệu kiến trúc trong `docs/architecture/` và `docs/ADR/` (đã tạo ở bước `02-architect.md`)
+3. Trích xuất tất cả **feature** (các ID có prefix `feature:*`) từ PRD
+4. Kết hợp thông tin từ System Design (module, component, data flow) để phân rã feature thành các PBI phù hợp
 3. Với mỗi feature, tạo một **Product Backlog Item (PBI)** bao gồm:
    - ID (giữ nguyên Universal ID từ PRD)
    - Mô tả (User Story format: "Với vai trò là... tôi muốn... để...")
