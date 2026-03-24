@@ -29,7 +29,7 @@ Quy trình gồm **4 giai đoạn chính**, được tách thành các file chi 
     ├── 01-create-prd.md              # Giai đoạn 0: Thu thập yêu cầu, tạo PRD, gán ID, commit
     ├── 02-architect.md               # Giai đoạn 1a: Thiết kế kiến trúc (ADR + System Design)
     ├── 03-pre-sprint.md              # Giai đoạn 1b: Backlog, Setup thư mục, Commit docs
-    ├── 02-sprint-planning.md         # Bước 2.1: Sprint Planning + Commit plan
+    ├── 04-sprint-planning.md         # Bước 4: Sprint Planning + Commit plan
     ├── 03-implementation.md          # Bước 2.2 + 2.3: Coding + User Testing + Commit Finish
     ├── 04-review-testing.md          # Bước 2.4: Code Review (self-review)
     ├── 06-release.md                 # Giai đoạn 3: Release, Deploy, Merge
@@ -90,9 +90,9 @@ Quy trình gồm **4 giai đoạn chính**, được tách thành các file chi 
 
 | Bước | Mô tả | File chi tiết |
 |------|-------|---------------|
-| 2.1 | Sprint Planning + **Commit Sprint Plan** ⚠️ | 📄 `agile/02-sprint-planning.md` |
+| 2.1 | Sprint Planning + **Commit Sprint Plan** ⚠️ | 📄 `agile/04-sprint-planning.md` |
 
-> 📖 **Đọc:** `.agents/workflows/agile/02-sprint-planning.md`
+> 📖 **Đọc:** `.agents/workflows/agile/04-sprint-planning.md`
 
 #### 🔁 Lặp lại cho MỖI task trong Sprint
 
