@@ -1,10 +1,19 @@
 # DataBucketPlugin — Hướng dẫn sử dụng
 
-> **Version:** 1.0.0  
+> **Version:** 1.0.1  
 > **SDK gốc:** Databuckets Unity SDK v1.0.6  
 > **Namespace:** `DataBucketPlugin`
 
-`DataBucketWrapper` là static wrapper class bọc các API của Databuckets SDK, tự động kiểm tra Init state và log error khi gọi sai thứ tự.
+Plugin gồm 2 layer:
+1. **Tracking Classes** (9 static classes) — Typed methods cho từng event trong Data Tracking Plan
+2. **DataBucketWrapper** — Init guard + raw Record API
+
+### 📚 Tài liệu liên quan
+
+| Tài liệu | Mô tả |
+|-----------|-------|
+| [DATA_TRACKING_GUIDE.md](DATA_TRACKING_GUIDE.md) | Chi tiết Event Definition, Trigger, KPI, Value Requirement, ví dụ code cho từng event |
+| [CHANGE_LOG.md](CHANGE_LOG.md) | Lịch sử thay đổi theo version |
 
 ---
 
@@ -31,13 +40,68 @@ public class GameManager : MonoBehaviour
         // 2. Bật Exception Tracking (tùy chọn)
         DataBucketWrapper.EnableExceptionTracking();
 
-        // 3. Set user properties
-        DataBucketWrapper.SetCommonProperty("user_level", 1);
+        // 3. Set user properties (typed)
+        DataBucketUserProperties.SetCurrentLevel(1);
+        DataBucketUserProperties.SetActiveDay(0);
 
-        // 4. Ghi event
-        DataBucketWrapper.Record("app_started", null);
+        // 4. Ghi event (typed — khuyến nghị)
+        DataBucketLevel.LevelStart(level: 1, durationTotalStart: 60000, playType: "home");
+
+        // 5. Hoặc ghi event raw (vẫn hỗ trợ)
+        DataBucketWrapper.Record("custom_event", null);
     }
 }
+```
+
+---
+
+## DataBucket Tracking Classes (v1.0.1)
+
+9 static classes cung cấp **typed methods** — developer không cần nhớ tên event hay key params.
+
+| Class | Events | Mô tả |
+|-------|--------|-------|
+| `DataBucketUserProperties` | — (SetCommonProperty) | Setter cho user properties |
+| `DataBucketLevel` | level_start, level_end, level_exit, level_reopen | Level analytics |
+| `DataBucketResource` | resource_earn, resource_spend | Resource earn/spend |
+| `DataBucketIAP` | iap_show, iap_click, iap_purchase_success, iap_purchase_failed, iap_close | IAP flow |
+| `DataBucketAd` | ad_request, ad_impression, ad_click, ad_complete | In-App Advertising |
+| `DataBucketNotification` | noti_send, noti_receive, noti_open | Push notifications |
+| `DataBucketLiveOps` | feature_first_show, feature_open, feature_close | Live Ops features |
+| `DataBucketMetrics` | tutorial_action, button_click, screen_show, screen_exit | Other metrics |
+| `DataBucketTechnical` | loading_start, loading_finish | Technical performance |
+
+> 📖 **Chi tiết Trigger, KPI, Value Requirement:** Xem [DATA_TRACKING_GUIDE.md](DATA_TRACKING_GUIDE.md)
+
+### Ví dụ sử dụng
+
+```csharp
+// User Properties
+DataBucketUserProperties.SetCurrentLevel(15);
+DataBucketUserProperties.SetResourceBalance("coin", 5000);
+
+// Level analytics
+DataBucketLevel.LevelStart(level: 5, durationTotalStart: 60000, playType: "home");
+DataBucketLevel.LevelEnd(level: 5, result: "win", durationPlay: 45000);
+
+// Resource
+DataBucketResource.Earn("currency", "gold", 50, "level_win", "reward");
+
+// IAP
+DataBucketIAP.Show("home_shop", "shop", "click", new[] { "null" });
+DataBucketIAP.PurchaseSuccess("home_shop", "pack", "click", "starterpack", 4.99, "USD");
+
+// Ad
+DataBucketAd.Impression("video_rewarded", "Admob", "Admob", "buy_booster", value: 0.05);
+
+// Notification
+DataBucketNotification.Send("remind", "Come back!");
+
+// Live Ops
+DataBucketLiveOps.FeatureOpen("daily_reward", placement: "home_icon");
+
+// Technical
+DataBucketTechnical.LoadingStart("api", "feed", "home");
 ```
 
 ---

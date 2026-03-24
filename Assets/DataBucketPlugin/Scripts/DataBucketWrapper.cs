@@ -16,11 +16,20 @@ namespace DataBucketPlugin
     /// <summary>
     /// DataBucketWrapper — Static wrapper class cho Databuckets Unity SDK v1.0.6.
     /// Cung cấp kiểm tra Init state tự động và log error khi gọi sai thứ tự.
-    /// Version: 1.0.0
     /// </summary>
     public static class DataBucketWrapper
     {
+        private static readonly string pluginVersion = "1.0.1";
         private static bool _isInitialized = false;
+
+        /// <summary>
+        /// Lấy version hiện tại của DataBucketPlugin.
+        /// </summary>
+        /// <returns>Plugin version string (VD: "1.0.1")</returns>
+        public static string GetPluginVersion()
+        {
+            return pluginVersion;
+        }
 
         /// <summary>
         /// Kiểm tra SDK đã được Init hay chưa.

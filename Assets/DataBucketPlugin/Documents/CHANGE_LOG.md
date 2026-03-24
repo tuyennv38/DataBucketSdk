@@ -2,6 +2,24 @@
 
 ---
 
+## DataBucketPlugin - v1.0.1 (24th 03 2026)
+
+### Change
+
+- **[NEW] DataBucketUserProperties:** Static class cung cấp 13 typed setter methods cho User Properties (current_level, ua_attribution, resource_balance, is_iap_user, active_day, connection_type, win/lose_streak...).
+- **[NEW] DataBucketLevel:** Static class cho Level analytics events — `LevelStart()`, `LevelEnd()`, `LevelExit()`, `LevelReopen()`.
+- **[NEW] DataBucketResource:** Static class cho Resource events — `Earn()`, `Spend()`.
+- **[NEW] DataBucketIAP:** Static class cho IAP events — `Show()`, `Click()`, `PurchaseSuccess()`, `PurchaseFailed()`, `Close()`.
+- **[NEW] DataBucketAd:** Static class cho IAA events — `Request()`, `Impression()`, `Click()`, `Complete()`.
+- **[NEW] DataBucketNotification:** Static class cho Notification events — `Send()`, `Receive()`, `Open()`.
+- **[NEW] DataBucketLiveOps:** Static class cho Live Ops events — `FeatureFirstShow()`, `FeatureOpen()`, `FeatureClose()`.
+- **[NEW] DataBucketMetrics:** Static class cho Other metrics — `TutorialAction()`, `ButtonClick()`, `ScreenShow()`, `ScreenExit()`.
+- **[NEW] DataBucketTechnical:** Static class cho Technical performance — `LoadingStart()`, `LoadingFinish()`.
+- **[NEW] DATA_TRACKING_GUIDE.md:** Tài liệu chi tiết Event Definition, Trigger, KPI, Value Requirement cho từng event.
+- **README.md:** Cập nhật thêm hướng dẫn DataBucket Tracking Classes.
+
+---
+
 ## DataBucketPlugin - v1.0.0 (24th 03 2026)
 
 ### Change
