@@ -1,37 +1,53 @@
 ---
 name: assign-universal-id
-description: Gán Universal ID cho các thành phần trong tài liệu PRD, đảm bảo truy vết hai chiều (bidirectional traceability) xuyên suốt vòng đời dự án.
+description: "Gán Universal ID cho các thành phần trong tài liệu PRD, đảm bảo truy vết hai chiều (bidirectional traceability) xuyên suốt vòng đời dự án."
+version: "1.0.0"
+author: "Tuyen"
+category: documentation
+risk: safe
+source: internal
+date_added: "2026-03-24"
+tags: [traceability, prd, universal-id, agile]
+tools: [claude, cursor, gemini]
 ---
 
-# Skill: Assign Universal ID
+# Assign Universal ID — Gán mã định danh truy vết cho tài liệu dự án
 
-## 1. Mục đích
+> **Mục tiêu:** Đảm bảo mọi yêu cầu, tính năng, task trong tài liệu PRD đều có mã định danh duy nhất, cho phép truy vết hai chiều (bidirectional traceability).
 
-Skill này hướng dẫn cách gán **Universal ID** cho các thành phần trong tài liệu PRD (và các tài liệu downstream khác) của **bất kỳ dự án nào**. Mục tiêu là đảm bảo mọi yêu cầu, tính năng, task đều có mã định danh duy nhất, cho phép **truy vết hai chiều (bidirectional traceability)**:
+Skill này hướng dẫn cách gán **Universal ID** cho các thành phần trong tài liệu PRD (và các tài liệu downstream khác) của **bất kỳ dự án nào**:
 - **Truy ngược (Backward Trace):** code/commit → task → feature → PRD gốc.
 - **Truy xuôi (Forward Trace):** PRD → feature → task → code/commit/test.
 
-## 2. Khi nào sử dụng
+---
+
+## Khi nào sử dụng
 
 - Khi nhận được yêu cầu gán ID cho tài liệu PRD hoặc bất kỳ tài liệu nào trong dự án.
 - Khi tạo mới hoặc cập nhật PRD, plan, feature spec, task list.
 - Khi cần thiết lập hệ thống truy vết (traceability) cho dự án mới.
 - Khi cần liên kết chéo (cross-reference) giữa các tầng: PRD → feature → task → code.
 
-## 3. Khi KHÔNG sử dụng
+## Khi KHÔNG sử dụng
 
 - **Tài liệu tạm thời / scratch notes**: Ghi chú nháp, brainstorm không cần gán ID.
 - **README.md hoặc hướng dẫn sử dụng chung**: Tài liệu không mô tả yêu cầu sản phẩm.
 - **Tài liệu ngoài scope dự án**: Meeting notes, email, tài liệu onboarding.
 - **Khi dự án chưa đạt đủ mức trưởng thành**: Nếu PRD còn đang thay đổi liên tục ở giai đoạn brainstorm ban đầu, chờ nội dung ổn định rồi hãy gán ID.
 
-## 4. Điều kiện tiên quyết
+---
+
+## Điều kiện tiên quyết
 
 1. Đọc file `resources/ID-CONVENTION.md` (đi kèm trong skill này) để nắm quy ước ID.
 2. Copy file `resources/ID-CONVENTION.md` vào `docs/ID-CONVENTION.md` của dự án nếu dự án chưa có.
 3. Nếu dự án đã có sẵn `docs/ID-CONVENTION.md`, **ưu tiên dùng file của dự án** (có thể đã được tùy biến cho phù hợp với ngữ cảnh riêng).
 
-## 5. Định dạng ID
+---
+
+## Hướng dẫn thực hiện
+
+### Định dạng ID
 
 ```
 <doc-type>:<component-name-XXXX>
@@ -43,7 +59,7 @@ Skill này hướng dẫn cách gán **Universal ID** cho các thành phần tro
 | `component-name` | Tên ngắn gọn, **kebab-case**, mô tả thành phần. |
 | `XXXX` | Số thứ tự 4 chữ số, bắt đầu từ `0001`, tăng dần **trong cùng một doc-type**. |
 
-### Bảng doc-type
+#### Bảng doc-type
 
 | doc-type   | Mô tả                                        | Ví dụ                          |
 |------------|-----------------------------------------------|--------------------------------|
@@ -60,9 +76,8 @@ Skill này hướng dẫn cách gán **Universal ID** cho các thành phần tro
 
 > **Lưu ý:** Dự án có thể bổ sung thêm doc-type khác nếu cần (ví dụ: `epic`, `story`, `spike`). Cập nhật vào `docs/ID-CONVENTION.md` của dự án.
 
-## 6. Quy trình thực hiện (6 bước)
-
 ### Bước 1: Đọc và phân tích tài liệu nguồn
+
 - Đọc toàn bộ tài liệu PRD cần gán ID.
 - Xác định các **khối chức năng có ý nghĩa trọn vẹn** (meaningful functional blocks).
 
@@ -117,24 +132,6 @@ Phân loại theo **3 tầng chính**:
 **Format link đến ID (từ file khác - cross-document):**
 ```markdown
 [`prd:restructure-overview-0001`](file:///path/to/PRD-001.md#prd-restructure-overview-0001)
-```
-
-**Ví dụ hoàn chỉnh trong một PRD:**
-```markdown
-## 1. Tổng quan
-<a id="prd-product-listing-0001"></a>
-`prd:product-listing-0001`
-Xây dựng trang danh sách sản phẩm...
-
-## 4. Tính năng
-<a id="feature-search-filter-0001"></a>
-`feature:search-filter-0001`
-> Implements: [`prd:product-listing-0001`](#prd-product-listing-0001)
-```
-
-**Ví dụ link từ file backlog đến PRD:**
-```markdown
-- **Implements:** [`prd:product-listing-0001`](./PRDs/PRD-001.md#prd-product-listing-0001)
 ```
 
 ### Bước 4: Gán tham chiếu ngược (Implements) — BẮT BUỘC
@@ -196,9 +193,13 @@ Trước khi hoàn tất, **bắt buộc kiểm tra** tất cả các điểm sa
 - [ ] Mỗi doc-type có bộ đếm XXXX riêng biệt?
 - [ ] Các tham chiếu cross-document dùng đúng `[id](relative-path.md#anchor)` format?
 
-## 7. Ví dụ hoàn chỉnh (Generic)
+---
+
+## Ví dụ
 
 > Chú ý: Mỗi ID được khai báo với `<a id="...">` anchor ngay phía trên. Bảng phụ lục dùng `[id](#anchor)` để click nhảy về đúng vị trí.
+
+### Ví dụ 1: PRD trang danh sách sản phẩm
 
 ```markdown
 ## 1. Tổng quan
@@ -246,7 +247,33 @@ Xây dựng trang danh sách sản phẩm...
 | [`task:add-search-0003`](#task-add-search-0003) | task | [`feature:search-filter-0002`](#feature-search-filter-0002) | Thêm bộ lọc |
 ```
 
-## 8. Anti-Patterns (KHÔNG làm)
+### Ví dụ 2: Link từ file backlog đến PRD (cross-document)
+
+```markdown
+## Backlog Item
+- **Feature:** `feature:search-filter-0001`
+- **Implements:** [`prd:product-listing-0001`](./PRDs/PRD-001.md#prd-product-listing-0001)
+- **Priority:** High
+```
+
+### Ví dụ 3: ID anchor khai báo đúng format
+
+```markdown
+<!-- Khai báo ID lần đầu — LUÔN có anchor -->
+<a id="prd-product-listing-0001"></a>
+`prd:product-listing-0001`
+Xây dựng trang danh sách sản phẩm...
+
+<!-- Tham chiếu đến ID (trong cùng file) — dùng link -->
+> Implements: [`prd:product-listing-0001`](#prd-product-listing-0001)
+
+<!-- Tham chiếu đến ID (từ file khác) — dùng relative path -->
+> Implements: [`prd:product-listing-0001`](./PRDs/PRD-001.md#prd-product-listing-0001)
+```
+
+---
+
+## Anti-Patterns (KHÔNG làm)
 
 ### ❌ Anti-Pattern 1: Tách quá nhỏ (Over-Granular IDs)
 
@@ -259,7 +286,7 @@ feature:validate-name-required-0004   ← 1 rule validate
 feature:validate-email-format-0005    ← 1 rule validate khác
 ```
 
-**Tại sao sai:** Các thành phần con (ô input, button) không có ý nghĩa độc lập – chúng là bộ phận của một form. Từng rule validate cũng vậy. Tách quá nhỏ tạo quá nhiều ID vụn vặt, gây khó quản lý mà không tăng giá trị truy vết.
+**Tại sao sai:** Các thành phần con (ô input, button) không có ý nghĩa độc lập – chúng là bộ phận của một form. Tách quá nhỏ tạo quá nhiều ID vụn vặt, gây khó quản lý mà không tăng giá trị truy vết.
 
 **Cách đúng:**
 ```markdown
@@ -328,7 +355,16 @@ Xây dựng trang danh sách sản phẩm...
 > Implements: [`prd:product-listing-0001`](#prd-product-listing-0001)
 ```
 
-## 9. Resources (Đóng gói trong skill)
+---
+
+## Skill liên quan
+
+- `@skill-creator` — Dùng để tạo hoặc chuẩn hóa skill mới
+- `@git-commit` — Dùng khi commit code với ID truy vết (`commit:*`, `Implements: task:*`)
+
+---
+
+## Resources (Đóng gói trong skill)
 
 | File | Mô tả | Cách sử dụng |
 |------|-------|--------------|
