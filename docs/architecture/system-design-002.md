@@ -35,12 +35,12 @@ graph LR
 
 ```
 Assets/DataBucketPlugin/
-├── scripts/
+├── Scripts/
 │   └── DataBucketWrapper.cs       ← Static wrapper class (core)
-├── documents/
+├── Documents/
 │   ├── README.md                  ← Hướng dẫn sử dụng
 │   └── CHANGE_LOG.md              ← Lịch sử thay đổi
-└── samples/
+└── Samples/
     └── DataBucketWrapperSample.cs ← MonoBehaviour test script
 ```
 

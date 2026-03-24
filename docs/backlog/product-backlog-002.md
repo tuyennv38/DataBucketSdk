@@ -16,7 +16,7 @@
   - [ ] AC2: Gọi Init lần 2 → log warning, không gọi lại SDK
 - **Priority:** Critical
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -32,7 +32,7 @@
   - [ ] AC2: Gọi Record trước Init → log error, không forward
 - **Priority:** Critical
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -48,7 +48,7 @@
   - [ ] AC2: Gọi trước Init → log error
 - **Priority:** High
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -64,7 +64,7 @@
   - [ ] AC2: Gọi trước Init → log error
 - **Priority:** High
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -80,7 +80,7 @@
   - [ ] AC2: Gọi trước Init → log error
 - **Priority:** High
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -96,7 +96,7 @@
   - [ ] AC2: Gọi trước Init → log error
 - **Priority:** Medium
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 
@@ -112,7 +112,7 @@
   - [ ] AC2: Gọi trước Init → log error
 - **Priority:** Medium
 - **Story Points:** 1
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done
 
 ---
 

@@ -23,11 +23,11 @@ Hoàn thành toàn bộ DataBucketPlugin v1.0.0: wrapper class, documentation, v
 
 | # | Task ID | Implements | Mô tả | Ước lượng | Status |
 |---|---------|------------|--------|-----------|--------|
-| 1 | `task:setup-project-0001` | [`prd:tech-stack-0002`](../../PRDs/PRD-002.md#prd-tech-stack-0002) | Tạo cấu trúc thư mục Assets/DataBucketPlugin/ | 5 min | ⬜ To Do |
-| 2 | `task:create-wrapper-0002` | [`feature:wrapper-init-0001`](../../backlog/product-backlog-002.md#feature-wrapper-init-0001) | Tạo DataBucketWrapper.cs — static wrapper class | 30 min | ⬜ To Do |
-| 3 | `task:create-readme-0003` | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo documents/README.md | 20 min | ⬜ To Do |
-| 4 | `task:create-changelog-0004` | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo documents/CHANGE_LOG.md v1.0.0 | 5 min | ⬜ To Do |
-| 5 | `task:create-sample-0005` | [`feature:sample-script-0009`](../../backlog/product-backlog-002.md#feature-sample-script-0009) | Tạo samples/DataBucketWrapperSample.cs | 15 min | ⬜ To Do |
+| 1 | `task:setup-project-0001` | [`prd:tech-stack-0002`](../../PRDs/PRD-002.md#prd-tech-stack-0002) | Tạo cấu trúc thư mục Assets/DataBucketPlugin/ | 5 min | ✅ Done |
+| 2 | `task:create-wrapper-0002` | [`feature:wrapper-init-0001`](../../backlog/product-backlog-002.md#feature-wrapper-init-0001) | Tạo DataBucketWrapper.cs — static wrapper class | 30 min | ✅ Done |
+| 3 | `task:create-readme-0003` | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo documents/README.md | 20 min | ✅ Done |
+| 4 | `task:create-changelog-0004` | [`feature:documentation-0008`](../../backlog/product-backlog-002.md#feature-documentation-0008) | Tạo documents/CHANGE_LOG.md v1.0.0 | 5 min | ✅ Done |
+| 5 | `task:create-sample-0005` | [`feature:sample-script-0009`](../../backlog/product-backlog-002.md#feature-sample-script-0009) | Tạo samples/DataBucketWrapperSample.cs | 15 min | ✅ Done |
 
 ## Definition of Done (DoD)
 
