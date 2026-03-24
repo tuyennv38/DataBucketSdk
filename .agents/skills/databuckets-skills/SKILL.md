@@ -67,6 +67,7 @@ Databuckets là nền tảng analytics tự động thu thập event, session, v
 | Time | `event_date`, `event_local_day_of_week`, `event_local_hour`, `event_local_hour_minute`, `install_day` | Thời gian event |
 | Retention | `retention_day`, `retention_hour`, `retention_minute` | Thời gian giữ chân |
 | Session | `session_id`, `session_progress` | Thông tin session |
+| SDK | `sdk_ver` | Phiên bản SDK |
 | User | `user_pseudo_id` | Anonymous user ID |
 | Geo | `geo.country`, `geo.loc`, `geo.city`, `geo.org`, `geo.timezone`, `geo.postal`, `geo.region` | Vị trí |
 | Device | `platform`, `app_store`, `app_version`, `device.platform_version`, `device.user_default_language`, `device.model`, `device.timezone_offset_seconds`, `device.brand_name`, `device.category` | Thiết bị |

@@ -71,6 +71,8 @@ Sau khi gọi `Init()`, SDK tự động:
 ### Ví dụ 1: Init trong Start() (Khuyến nghị)
 
 ```csharp
+using Databuckets;
+
 public class AnalyticsManager : MonoBehaviour
 {
     void Start()
@@ -86,6 +88,8 @@ public class AnalyticsManager : MonoBehaviour
 ### Ví dụ 2: Init bằng Coroutine (chờ 1 frame)
 
 ```csharp
+using Databuckets;
+
 public class AnalyticsManager : MonoBehaviour
 {
     IEnumerator Start()
@@ -99,11 +103,33 @@ public class AnalyticsManager : MonoBehaviour
 }
 ```
 
+### Ví dụ 3: Init bằng Invoke delay 100ms
+
+```csharp
+using Databuckets;
+
+public class AnalyticsManager : MonoBehaviour
+{
+    void Start()
+    {
+        Invoke(nameof(InitSDK), 0.1f);
+    }
+
+    void InitSDK()
+    {
+        DatabucketsTracker.Init(
+            "https://api.databuckets.io/v1",
+            "your-api-key-here"
+        );
+    }
+}
+```
+
 ---
 
 ## Best Practices
 
-- ✅ Gọi trong `Start()` hoặc sau `yield return null`
+- ✅ Gọi trong `Start()`, sau `yield return null`, hoặc bằng `Invoke(nameof(InitSDK), 0.1f)`
 - ✅ Chỉ gọi **1 lần duy nhất** trong toàn bộ app lifecycle
 - ✅ Gọi **trước** mọi API khác của SDK (`Record`, `SetCommonProperty`...)
 - ❌ KHÔNG gọi trong `Awake()` — scene chưa loaded

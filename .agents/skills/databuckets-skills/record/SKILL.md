@@ -60,12 +60,16 @@ DatabucketsTracker.Record("event_name", params);
 ### Ví dụ 1: Event đơn giản (không có params)
 
 ```csharp
+using Databuckets;
+
 DatabucketsTracker.Record("main_menu_opened", null);
 ```
 
 ### Ví dụ 2: Event với params Dictionary
 
 ```csharp
+using Databuckets;
+using System.Collections.Generic;
 var levelParams = new Dictionary<string, object>
 {
     ["level"] = 1,
