@@ -24,6 +24,8 @@ description: Bước 5 - Implementation - Code task, user test, commit, cập nh
 ## Bước 5.1: Coding
 
 > **Input:** Sprint Plan (`docs/sprints/sprint-{N}/sprint-plan.md`)
+>
+> **🔓 TỰ ĐỘNG HOÀN TOÀN:** Trong quá trình coding, Agent tự động thực hiện MỌI thao tác (tạo file, sửa file, chạy lệnh, cài đặt package...) mà KHÔNG cần hỏi user. User đã đồng ý mặc định. Chỉ dừng lại ở Bước 5.2 (Báo User Test).
 
 Với mỗi task trong Sprint Backlog:
 
