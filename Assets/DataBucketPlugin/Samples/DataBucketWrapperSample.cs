@@ -151,6 +151,7 @@ public class DataBucketWrapperSample : MonoBehaviour
             level: 5,
             result: "win",
             durationPlay: 45000,
+            loseBy: null,
             playType: "home",
             playIndex: 1,
             loseIndex: 0,

@@ -83,14 +83,14 @@ namespace DataBucketPlugin
             int level,
             string result,
             long durationPlay,
-            string loseBy = null,
+            string loseBy,
+            long durationTotalStart,
+            long durationTotalEnd,
+            long durationRemain,
             int? loopBy = null,
             string playType = null,
             int? playIndex = null,
             int? loseIndex = null,
-            long? durationTotalStart = null,
-            long? durationTotalEnd = null,
-            long? durationRemain = null,
             int? itemsTotal = null,
             int? itemsCleared = null,
             string actionSeq = null,
@@ -100,17 +100,17 @@ namespace DataBucketPlugin
             {
                 { "level", level },
                 { "result", result },
-                { "duration_play", durationPlay }
+                { "duration_play", durationPlay },
+                { "lose_by", loseBy },
+                { "duration_total_start", durationTotalStart },
+                { "duration_total_end", durationTotalEnd },
+                { "duration_remain", durationRemain }
             };
 
-            if (loseBy != null) eventParams["lose_by"] = loseBy;
             if (loopBy.HasValue) eventParams["loop_by"] = loopBy.Value;
             if (playType != null) eventParams["play_type"] = playType;
             if (playIndex.HasValue) eventParams["play_index"] = playIndex.Value;
             if (loseIndex.HasValue) eventParams["lose_index"] = loseIndex.Value;
-            if (durationTotalStart.HasValue) eventParams["duration_total_start"] = durationTotalStart.Value;
-            if (durationTotalEnd.HasValue) eventParams["duration_total_end"] = durationTotalEnd.Value;
-            if (durationRemain.HasValue) eventParams["duration_remain"] = durationRemain.Value;
             if (itemsTotal.HasValue) eventParams["items_total"] = itemsTotal.Value;
             if (itemsCleared.HasValue) eventParams["items_cleared"] = itemsCleared.Value;
             if (actionSeq != null) eventParams["action_seq"] = actionSeq;
@@ -145,15 +145,15 @@ namespace DataBucketPlugin
         /// <remarks>Chi tiết: xem Documents/DATA_TRACKING_GUIDE.md#level_exit</remarks>
         public static void LevelExit(
             int level,
+            long durationTotalStart,
+            long durationTotalEnd,
+            long durationRemain,
+            long durationPlay,
             int? loopBy = null,
             string playType = null,
             int? playIndex = null,
             int? loseIndex = null,
             int? exitIndex = null,
-            long? durationTotalStart = null,
-            long? durationTotalEnd = null,
-            long? durationRemain = null,
-            long? durationPlay = null,
             int? itemsTotal = null,
             int? itemsCleared = null,
             string actionSeq = null,
@@ -161,7 +161,11 @@ namespace DataBucketPlugin
         {
             var eventParams = new Dictionary<string, object>
             {
-                { "level", level }
+                { "level", level },
+                { "duration_total_start", durationTotalStart },
+                { "duration_total_end", durationTotalEnd },
+                { "duration_remain", durationRemain },
+                { "duration_play", durationPlay }
             };
 
             if (loopBy.HasValue) eventParams["loop_by"] = loopBy.Value;
@@ -169,10 +173,6 @@ namespace DataBucketPlugin
             if (playIndex.HasValue) eventParams["play_index"] = playIndex.Value;
             if (loseIndex.HasValue) eventParams["lose_index"] = loseIndex.Value;
             if (exitIndex.HasValue) eventParams["exit_index"] = exitIndex.Value;
-            if (durationTotalStart.HasValue) eventParams["duration_total_start"] = durationTotalStart.Value;
-            if (durationTotalEnd.HasValue) eventParams["duration_total_end"] = durationTotalEnd.Value;
-            if (durationRemain.HasValue) eventParams["duration_remain"] = durationRemain.Value;
-            if (durationPlay.HasValue) eventParams["duration_play"] = durationPlay.Value;
             if (itemsTotal.HasValue) eventParams["items_total"] = itemsTotal.Value;
             if (itemsCleared.HasValue) eventParams["items_cleared"] = itemsCleared.Value;
             if (actionSeq != null) eventParams["action_seq"] = actionSeq;
@@ -200,21 +200,21 @@ namespace DataBucketPlugin
         /// <remarks>Chi tiết: xem Documents/DATA_TRACKING_GUIDE.md#level_reopen</remarks>
         public static void LevelReopen(
             int level,
+            long durationTotalStart,
             int? loopBy = null,
             int? playIndex = null,
             int? loseIndex = null,
-            long? durationTotalStart = null,
             string mode = null)
         {
             var eventParams = new Dictionary<string, object>
             {
-                { "level", level }
+                { "level", level },
+                { "duration_total_start", durationTotalStart }
             };
 
             if (loopBy.HasValue) eventParams["loop_by"] = loopBy.Value;
             if (playIndex.HasValue) eventParams["play_index"] = playIndex.Value;
             if (loseIndex.HasValue) eventParams["lose_index"] = loseIndex.Value;
-            if (durationTotalStart.HasValue) eventParams["duration_total_start"] = durationTotalStart.Value;
             if (mode != null) eventParams["mode"] = mode;
 
             DataBucketWrapper.Record("level_reopen", eventParams);
